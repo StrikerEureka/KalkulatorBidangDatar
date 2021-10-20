@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextInputEditText panjang, lebar;
     ImageButton button_persegi, button_segitiga, button_lingkaran;
-    TextView hasil, luas, keliling;
+    TextView luas, keliling;
 
 
     @Override
@@ -27,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
         button_persegi = (ImageButton) findViewById(R.id.button_persegi);
         button_segitiga = (ImageButton) findViewById(R.id.button_segitiga);
         button_lingkaran = (ImageButton) findViewById(R.id.button_lingkaran);
-        hasil = (TextView)findViewById(R.id.hasil);
-        luas = (TextView) findViewById(R.id.luas);
-        keliling = (TextView) findViewById(R.id.keliling);
+        luas = (TextView) findViewById(R.id.textLuas);
+        keliling = (TextView) findViewById(R.id.textKeliling);
 
         button_persegi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     double hasilkel = kelilingpersegi(panjang, lebar);
                     String outputLuas = String.valueOf(hasilLuas);
                     String outputKeliling = String.valueOf(hasilkel);
-                    luas.setText(outputLuas);
-                    keliling.setText(outputKeliling);
+                    luas.setText("Luas \t\t\t\t : "+outputLuas.toString());
+                    keliling.setText("Keliling \t : "+outputKeliling.toString());
                 }
             }
         });
@@ -73,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
                     double hasilkel = kelilingsegitiga(panjang, lebar);
                     String outputLuas = String.valueOf(hasilLuas);
                     String outputKeliling = String.valueOf(hasilkel);
-                    luas.setText(outputLuas);
-                    keliling.setText(outputKeliling);
+                    luas.setText("Luas \t\t\t\t : "+outputLuas.toString());
+                    keliling.setText("Keliling \t : "+outputKeliling.toString());
                 }
             }
         });
@@ -95,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
                     double hasilkel = kelilinglingkaran(panjang);
                     String outputLuas = String.valueOf(hasilLuas);
                     String outputKeliling = String.valueOf(hasilkel);
-                    luas.setText(outputLuas);
-                    keliling.setText(outputKeliling);
+                    luas.setText("Luas \t\t\t\t : "+outputLuas.toString());
+                    keliling.setText("Keliling \t : "+outputKeliling.toString());
                 }
             }
         });
